@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #252627;
+  color: #fff;
+}
+
+h1 {
+  padding: 24px;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+#employee-container {
+  margin: 20px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.employee-card {
+  min-width: 400px;
+  padding: 12px 12px 2px;
+  border-radius: 20px;
+  background: #2c2d2d;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.13);
+}
+
+.head-part {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  padding: 18px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  border-radius: 10px;
+  background: #545454;
+}
+
+.name-container {
+  margin-left: 13px;
+}
+
+.name-container h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.name-container h4 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contacts-part {
+  margin-top: 10px;
+}
+.email-container,
+.website-container,
+.phone-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contacts-part h4 {
+  margin-left: 5px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contacts-part img {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1700px) {
+  #employee-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  #employee-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 865px) {
+    #employee-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .employee-card {
+        width: 350px;
+        min-width: unset;
+    }
+  }
